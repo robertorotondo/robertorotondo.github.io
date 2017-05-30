@@ -10,7 +10,7 @@ jQuery.noConflict()(function($) {
         // will fade out the whole DIV that covers the website.
         $("#preloader").fadeOut("slow");
 		
-		$("#ajax-contact-form").submit(function() {
+		/*$("#ajax-contact-form").submit(function() {
             // this points to our form
             var str = $(this).serialize(); // Serialize the data for the POST-request
             var result = '';
@@ -31,10 +31,20 @@ jQuery.noConflict()(function($) {
                 }
             });
             return false;
-        });
+        });*/
 		
 		
     });
+    
+    $('#menu-header').onePageNav({
+        currentClass: 'current',
+        changeHash: false,
+        scrollSpeed: 750,
+        scrollThreshold: 0.5,
+        filter: '',
+        easing: 'swing',
+    });
+
     $('.oi_head_bg').css('opacity', 0);
     $('.oi_head_bg').animate({
         opacity: 1,
@@ -69,7 +79,7 @@ jQuery.noConflict()(function($) {
     $(".oi_custom_heading_holder").each(function(index) {
         $(this).find(".oi_heading_icon:not(.oi_heading_icon_center)").css('margin-top', ($(this).height() - $(this).find('i').height()) / 2);
     });
-    if ($("div").is("#map")) {
+    /*if ($("div").is("#map")) {
         $("#map").gmap3({
             marker: {
                 // address:"93 Worth St, New York, NY",
@@ -95,7 +105,7 @@ jQuery.noConflict()(function($) {
                 }
             }
         });
-    };
+    };*/
 
 
     $('#oi_glitch').height($(window).outerHeight());
@@ -213,13 +223,13 @@ jQuery.noConflict()(function($) {
         return false;
 	});
 	
-	$("a[href='#end_header']", ".scroll-icon").on("click", function(e) {
+	/*$("a[href='#end_header']", ".scroll-icon").on("click", function(e) {
     	e.preventDefault();
         $('body,html').animate({
             scrollTop: ($('.oi_head_holder').height() - 100)
         }, 400);
         return false;
-    });
+    });*/
     
        
 	$(".oi_xs_menu", ".oi_head_holder").on("click", function(e) {
