@@ -246,7 +246,7 @@ jQuery.noConflict()(function($) {
 // PORTFOLIO FILTERING - ISOTOPE
 //**********************************
 
-	if ($("div").is(".oi_port_container")) {
+	/*if ($("div").is(".oi_port_container")) {
 		var $container = $('.oi_port_container');
 	
 		if ($container.length) {
@@ -273,5 +273,51 @@ jQuery.noConflict()(function($) {
 	
 			}, null, true);
 		}
-	};
+	};*/
+
+    //portfolio filter (isotop) initializing. 
+    var $grid = $('.oi_port_container').isotope({
+        itemSelector: '.oi_strange_portfolio_item',
+        layoutMode: 'masonry'
+    });
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
+
+    //forcing a perfect masonry layout after initial load
+    setTimeout(function() {
+        var $grid = $('.oi_port_container').isotope({
+            itemSelector: '.oi_strange_portfolio_item',
+            layoutMode: 'masonry'
+        });
+
+        $grid.imagesLoaded().progress( function() {
+            $grid.isotope('layout');
+        });
+    }, 1000);
+    //Isotope ReLayout on Page Load event.
+    $(window).load(function() {
+        
+        var $grid = $('.oi_port_container').isotope({
+            itemSelector: '.oi_strange_portfolio_item',
+            layoutMode: 'masonry'
+        });
+
+        $grid.imagesLoaded().progress( function() {
+            $grid.isotope('layout');
+        });
+    });
+    //Isotope ReLayout on Window Resize event.
+    $(window).on('resize', function() {
+        
+        var $grid = $('.oi_port_container').isotope({
+            itemSelector: '.oi_strange_portfolio_item',
+            layoutMode: 'masonry'
+        });
+
+        $grid.imagesLoaded().progress( function() {
+            $grid.isotope('layout');
+        });
+    });
 });	

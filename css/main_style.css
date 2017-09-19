@@ -200,7 +200,7 @@ ul.oi_header_menu > li > a,
 
 	/*Wall*/
 	.oi_wall { margin-left:0px; margin-right:0px;}
-	.oi_col.col-md-4, .oi_col.col-md-8, .oi_col.col-md-3, .oi_col.col-md-6 { margin-bottom:0px; padding:0px;}
+	.oi_col.col-md-4, .oi_col.col-md-8, .oi_col.col-md-3, .oi_col.col-md-6, .oi_col.col-md-12 { margin-bottom:0px; padding:0px;}
 	.oi_wall .oi_strange_portfolio_item .oi_mask {top:10px; left:10px; bottom:10px; right:10px;}
 
 
